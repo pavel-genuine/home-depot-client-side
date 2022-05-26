@@ -22,6 +22,7 @@ import NotFound from './Components/NotFound/NotFound';
 import MakeAdmin from './Components/Dashboard/MakeAdmin';
 import RequireAdmin from './Components/RequireAuth/RequireAdmin';
 import Blogs from './Components/Blogs/Blogs';
+import ContactUs from './Components/ContactUs/ContactUs';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
        <Route path='/' element={<Home></Home>}></Route>
        <Route path='/business-summary' element={<BusinessSummary></BusinessSummary>}></Route>
        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+       <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
        <Route path="/purchase/:id" element={<RequireAuth><PurchaseProduct /></RequireAuth>} ></Route>
        <Route path="/payment/:id" element={<RequireAuth><Payment/></RequireAuth>} ></Route>
        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
