@@ -16,8 +16,27 @@ const Orders = () => {
             // console.log(data);
             setOrders(data)})
     },[orders]
-        
+    
     )
+
+    const doShipped =(id)=>{
+        
+        // const data = {
+        //     status:'shipped'
+        // }
+        const url = `http://localhost:5000/shipped/${id}`
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            // body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => console.log( result))    
+
+        
+    }
 
     return (
         <div className='m-10'>
@@ -31,8 +50,14 @@ const Orders = () => {
                     
                     <p>Quantity : {order?.quantity}</p>
                 {
-                    order?.paid? <button className='btn btn-sm btn-success mt-2'>Pending</button> :<button className='btn btn-sm btn-error mt-2'>Unpaid</button>
+                     !order?.paid && <button className='btn btn-sm btn-primary mt-2'>Unpaid</button>
 
+                }
+                {
+                    order?.paid && !order?.status && <button onClick={()=>doShipped(order?._id)} className='btn btn-sm btn-error mt-2'>Pending</button> 
+                }
+                {
+                    order?.status && <button className='btn btn-sm btn-success mt-2'>Shipped</button>
                 }
                 </div>)
            }
