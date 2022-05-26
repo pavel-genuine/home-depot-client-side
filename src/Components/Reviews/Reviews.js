@@ -1,3 +1,5 @@
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -22,15 +24,24 @@ const Reviews = () => {
          {
                reviews.map(review=>
                
-                <div>
+                <div className='shadow-md m-4 p-4'>
                     <p>Review: {review?.review}</p>
-                    <p>Rating : {review?.rating >=5 &&<div class="rating">
-  <input type="radio" name="rating-1" class="mask mask-star" />
-  <input type="radio" name="rating-1" class="mask mask-star"  />
-  <input type="radio" name="rating-1" class="mask mask-star" />
-  <input type="radio" name="rating-1" class="mask mask-star" />
-  <input type="radio" name="rating-1" class="mask mask-star"checked />
-</div>}</p>
+                  
+                    {review?.rating >=5?<React.Fragment><h5 style={{margin:'10px 2px'}}>Rating :</h5><FontAwesomeIcon icon={faStar}></FontAwesomeIcon><FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon><FontAwesomeIcon icon={faStar}></FontAwesomeIcon><FontAwesomeIcon icon={faStar}></FontAwesomeIcon></React.Fragment> :''}
+            
+            {review?.rating==4?<React.Fragment><h5 style={{margin:'10px 2px'}}>Rating :</h5><FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon><FontAwesomeIcon icon={faStar}></FontAwesomeIcon><FontAwesomeIcon icon={faStar}></FontAwesomeIcon></React.Fragment> :''} 
+            
+            {review?.rating==3?<React.Fragment><h5 style={{margin:'10px 2px'}}>Rating :</h5><FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon><FontAwesomeIcon icon={faStar}></FontAwesomeIcon><FontAwesomeIcon icon={faStar}></FontAwesomeIcon></React.Fragment> :''} 
+           
+            {review?.rating==2?<React.Fragment><h5 style={{margin:'10px 2px'}}>Rating :</h5><FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+           <FontAwesomeIcon icon={faStar}></FontAwesomeIcon></React.Fragment> :''} 
+            {review?.rating==1?<React.Fragment><h5 style={{margin:'10px 2px'}}>Rating :</h5><FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+           </React.Fragment> :''} 
+           
+          
                 </div>)
            }
          </div>

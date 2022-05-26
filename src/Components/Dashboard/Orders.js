@@ -19,6 +19,26 @@ const Orders = () => {
     
     )
 
+    
+    const handleDeleteOne = id => {
+        const confirmation = window.confirm('Are you sure to delete?');
+        if (confirmation) {
+            const url = `http://localhost:5000/orders/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+
+            }
+            )
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remainingItems = orders?.filter(item => item?._id !== id);
+                    setOrders(remainingItems);
+                })
+        }
+    }
+
+
     const doShipped =(id)=>{
         
         // const data = {
@@ -59,6 +79,13 @@ const Orders = () => {
                 {
                     order?.status && <button className='btn btn-sm btn-success mt-2'>Shipped</button>
                 }
+
+                {
+                     !order?.paid &&  <button className='btn btn-sm btn-error mr-5 mt-3 ' onClick={() => handleDeleteOne(order?._id)}>Delete</button>
+
+                }
+
+
                 </div>)
            }
          </div>
