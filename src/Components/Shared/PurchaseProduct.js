@@ -20,7 +20,7 @@ const PurchaseProduct = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchase/${id}`)
+        fetch(`https://frozen-beyond-80162.herokuapp.com/purchase/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
               
@@ -52,7 +52,7 @@ const PurchaseProduct = () => {
         }
 
 
-        const url = `http://localhost:5000/purchase/${id}`
+        const url = `https://frozen-beyond-80162.herokuapp.com/purchase/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -85,7 +85,7 @@ const PurchaseProduct = () => {
             setQuantity(product?.quantity)
         }
 
-        const url = `http://localhost:5000/purchase/${id}`
+        const url = `https://frozen-beyond-80162.herokuapp.com/purchase/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -115,7 +115,7 @@ const PurchaseProduct = () => {
  
         const email =user.email
 
-        const url = `http://localhost:5000/user/${email}`
+        const url = `https://frozen-beyond-80162.herokuapp.com/user/${email}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -127,7 +127,7 @@ const PurchaseProduct = () => {
             .then(result => console.log( result))
         
 
-            const url2 =`http://localhost:5000/order`
+            const url2 =`https://frozen-beyond-80162.herokuapp.com/order`
             //  const email=user.email
 
              const information ={

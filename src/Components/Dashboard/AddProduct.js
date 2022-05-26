@@ -9,7 +9,7 @@ const AddProduct = () => {
         // console.log(user, data);
         e.target.reset();
 
-        const url = `http://localhost:5000/tool`
+        const url = `https://frozen-beyond-80162.herokuapp.com/tool`
         fetch(url, {
             method: 'POST',
             headers: {

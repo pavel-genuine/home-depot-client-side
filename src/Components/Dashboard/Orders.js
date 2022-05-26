@@ -10,7 +10,7 @@ const Orders = () => {
     
 
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://frozen-beyond-80162.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>{
             // console.log(data);

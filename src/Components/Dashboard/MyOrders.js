@@ -21,7 +21,7 @@ const MyOrders = () => {
     const handleDeleteOne = id => {
         const confirmation = window.confirm('Are you sure to delete?');
         if (confirmation) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://frozen-beyond-80162.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
 

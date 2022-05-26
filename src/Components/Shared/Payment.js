@@ -24,7 +24,7 @@ const Payment = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/payment/${id}`)
+        fetch(`https://frozen-beyond-80162.herokuapp.com/payment/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [product])

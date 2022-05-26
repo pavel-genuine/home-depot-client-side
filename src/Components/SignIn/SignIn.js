@@ -52,10 +52,10 @@ const SignIn = () => {
 
     const onSubmit =async (data) => {
       await  signInWithEmailAndPassword(data.email, data.password);
-      const email =data.email
+      const email =data?.email
       console.log(email);
 
-      const {data2} = await axios.post('http://localhost:5000/sign-in',{email});
+      const {data2} = await axios.post('https://frozen-beyond-80162.herokuapp.com/sign-in',{email});
       localStorage.setItem('accessToken', data2?.accessToken);
       console.log('d2',data2);
   }

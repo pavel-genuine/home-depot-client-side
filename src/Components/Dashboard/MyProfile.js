@@ -23,7 +23,7 @@ const MyProfile = () => {
         // console.log(user, data);
         e.target.reset();
 
-        const url = `http://localhost:5000/user/${email}`
+        const url = `https://frozen-beyond-80162.herokuapp.com/user/${email}`
         fetch(url, {
             method: 'PUT',
             headers: {

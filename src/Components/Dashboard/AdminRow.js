@@ -3,7 +3,7 @@ import React from 'react';
 const AdminRow =  ({ user, refetch }) => {
     const { email, role } = user;
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://frozen-beyond-80162.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             // headers: {
             //     authorization: `Bearer ${localStorage.getItem('accessToken')}`

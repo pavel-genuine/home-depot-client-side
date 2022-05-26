@@ -19,7 +19,7 @@ const CheckoutForm = (props) => {
     const totalPrice = price*quantity;
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://frozen-beyond-80162.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -107,7 +107,7 @@ const CheckoutForm = (props) => {
                 
             }
             
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://frozen-beyond-80162.herokuapp.com/orders/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
