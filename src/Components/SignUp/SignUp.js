@@ -6,7 +6,40 @@ import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 
 const SignUp = () => {
-   
+    const [signInWithGoogle, googleUser, googleLoading, gError] = useSignInWithGoogle(auth);
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+    // const [token]  = useToken(user || gUser);
+
+    const navigate = useNavigate();
+
+    let signInError;
+
+    if (loading || googleLoading || updating) {
+        return <Loading></Loading>
+    }
+
+    if (error || gError || updateError) {
+        signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
+    }
+
+    if (user || googleUser) {
+        navigate('/');
+    }
+
+    const onSubmit = async data => {
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name });
+        console.log('update done');
+    }
     return (
 
            
