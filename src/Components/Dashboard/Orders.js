@@ -22,7 +22,7 @@ const Orders = () => {
     return (
         <div className='m-10'>
            Orders length :{orders?.length}
-         <div className='grid grid-cols-3 gap-2'>
+         <div className='grid  md:grid-cols-4 grid-cols-1 gap-2'>
          {
                orders.map(order=>
                 <div className='shadow-lg p-10 m-5'>

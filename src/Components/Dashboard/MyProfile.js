@@ -11,7 +11,7 @@ const MyProfile = () => {
     const email =user?.email
     useEffect(() => {
         
-        fetch(`http://localhost:5000/user?email=${email}`)
+        fetch(`http://localhost:5000/users?email=${email}`)
             .then(res => res.json())
             .then(data => {setProfile(data)
             // console.log(data);

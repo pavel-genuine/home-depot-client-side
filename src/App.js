@@ -23,6 +23,7 @@ import MakeAdmin from './Components/Dashboard/MakeAdmin';
 import RequireAdmin from './Components/RequireAuth/RequireAdmin';
 import Blogs from './Components/Blogs/Blogs';
 import ContactUs from './Components/ContactUs/ContactUs';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -55,6 +56,8 @@ function App() {
        <Route path='/sign-in' element={<SignIn></SignIn>} ></Route>
        <Route path='/*' element={<NotFound></NotFound>} ></Route>
      </Routes>
+
+     <Footer></Footer>
     </div>
   );
 }

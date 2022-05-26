@@ -2,10 +2,10 @@ import React from 'react';
 
 const Portfolio = () => {
     return (
-        <div>
+        <div  style={{ padding: "50px", height: '100vh' }}>
             <div>
 
-                <div style={{ padding: "50px", height: '60vh' }}>
+                <div>
                     <h4 className='text-2xl'>My Self</h4>
                     <p>I'm Joynul Abedin Pavel, a CSE student from NSU. I want to start a tech based start-up soon which will work to solve some burning problems of our country.
                         It's now at a brainstorming stage. One of BUET students,  my co-partner and I are planning to work with supply chain related problems to solve and make smooth using technology.

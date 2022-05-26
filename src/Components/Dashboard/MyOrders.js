@@ -70,7 +70,7 @@ const MyOrders = () => {
         <div className='row w-75 mx-auto ' style={{ height: '100vh' }} >
             <p className='m-5'>My Orders length : {myOrders?.length}</p>
 
-            <div className='grid grid-cols-4 gap-2'>
+            <div className='grid  md:grid-cols-4 grid-cols-1 gap-2'>
                 {
                     myOrders?.map(item =>
 

@@ -31,7 +31,7 @@ const ManageProduct = () => {
       <div className='row w-75 mx-auto ' style={{ height: '100vh' }} >
       <p className='m-5'>Products length : {products.length}</p>
 
-      <div className='grid grid-cols-3 gap-2'>
+      <div className='grid  md:grid-cols-4 grid-cols-1 gap-2'>
           {
               products?.map(item =>
 

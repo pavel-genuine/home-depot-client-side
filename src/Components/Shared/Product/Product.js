@@ -11,10 +11,10 @@ const Product = (props) => {
     }
 
     return (
-        <div style={{ width: '80%' }}>
+        <div >
 
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src={img} alt="tools" /></figure>
+            <div  className="card card-compact w-96 bg-base-100 shadow-xl ">
+                <figure>< img style={{ width: '80%' }} src={img} alt="tools" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p title={description}>{description.slice(0, 200)}...</p>
