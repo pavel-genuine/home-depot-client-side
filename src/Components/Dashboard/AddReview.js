@@ -24,7 +24,7 @@ const AddReview = () => {
     }
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className='m-5' onSubmit={handleSubmit(onSubmit)}>
              <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Give A Review</span>

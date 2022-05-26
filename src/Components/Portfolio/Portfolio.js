@@ -2,7 +2,7 @@ import React from 'react';
 
 const Portfolio = () => {
     return (
-        <div  style={{ padding: "50px", height: '100vh' }}>
+        <div  className="p-10 h-[120vh] md:h-[50vh]">
             <div>
 
                 <div>
@@ -21,14 +21,14 @@ const Portfolio = () => {
                     <br />
                     <div>
                         <p>
-                            Some of my works :
+                            Please click the buttons to see some of my works :
 
                         </p> <br />
                         <button className='btn'><p><a href="https://full-stack-11.web.app/"> link 1</a></p>
-                        </button>      <br />
-                        <button className='btn my-5'>
+                        </button>      
+                        <button className='btn mx-5'>
                             <p><a href="https://fir-red-onion.web.app/"> link 2</a></p>
-                        </button> <br />
+                        </button> 
                         <button className='btn'>
                             <p><a href="https://assignment-9-routes.netlify.app/"> link 3</a></p>
 

@@ -4,6 +4,8 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Loading from '../Shared/Loading';
+import useToken from '../Hooks/useToken';
+import axios from 'axios';
 
 const SignIn = () => {
 
@@ -19,12 +21,19 @@ const SignIn = () => {
     const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
 
 
-    // const [token] = useToken(user || gUser);
+    // const [token] = useToken(user || user1);
 
     let signInError;
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+
+
+    // useEffect( () =>{
+    //     if (token) {
+    //         navigate(from, { replace: true });
+    //     }
+    // }, [token, from, navigate])
 
     
         if (user || user1) {
@@ -41,9 +50,16 @@ const SignIn = () => {
         signInError= <p className='text-red-500'><small>{error?.message || error1?.message }</small></p>
     }
 
-    const onSubmit = data => {
-        signInWithEmailAndPassword(data.email, data.password);
-    }
+    const onSubmit =async (data) => {
+      await  signInWithEmailAndPassword(data.email, data.password);
+      const email =data.email
+      console.log(email);
+
+      const {data2} = await axios.post('http://localhost:5000/sign-in',{email});
+      localStorage.setItem('accessToken', data2?.accessToken);
+      console.log('d2',data2);
+  }
+    
 
     return (
         <div className='bg-[#050535] flex h-screen justify-center items-center'>

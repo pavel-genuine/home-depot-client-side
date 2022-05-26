@@ -28,14 +28,14 @@ const ManageProduct = () => {
 
 
     return (
-      <div className='row w-75 mx-auto ' style={{ height: '100vh' }} >
+      <div className='row w-75 mx-auto' style={{ height: '100vh' }} >
       <p className='m-5'>Products length : {products.length}</p>
 
       <div className='grid  md:grid-cols-4 grid-cols-1 gap-2'>
           {
               products?.map(item =>
 
-                  <div  key={item._id} style={{ width: '90%' }} className='my-2 p-3  shadow-lg' >
+                  <div  key={item._id} style={{ width: '90%' }} className='m-5 p-3  shadow-lg' >
                       {/* <img style={{ width: '30%' }} src={item?.product?.img} alt="" /> */}
                       <p className='font-semibold'>Name : {item?.name}</p>
                       <p>Unit Price : tk. {item?.price}</p>

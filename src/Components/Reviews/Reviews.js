@@ -20,7 +20,7 @@ const Reviews = () => {
     return (
         <div className='m-10'>
            review length :{reviews?.length}
-         <div className='grid grid-cols-3 gap-2 m-5'>
+         <div className='grid grid-cols-1 md:grid-cols-3 gap-2 m-5'>
          {
                reviews.map(review=>
                

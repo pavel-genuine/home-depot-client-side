@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className=' mx-auto mt-10' style={{width:"90%"}}>
+        <div className=' mx-auto m-10' style={{width:"90%"}}>
         <p>
         1.How will you improve the performance of a React Application? <br />
 Ans: <br />
