@@ -11,7 +11,7 @@ const ManageProduct = () => {
   const handleDeleteOne = id => {
     const confirmation = window.confirm('Are you sure to delete?');
     if (confirmation) {
-        const url = `https://frozen-beyond-80162.herokuapp.com/${id}`;
+        const url = `https://frozen-beyond-80162.herokuapp.com/tools/${id}`;
         fetch(url, {
             method: 'DELETE',
 

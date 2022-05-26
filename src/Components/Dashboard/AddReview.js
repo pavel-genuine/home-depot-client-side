@@ -10,7 +10,7 @@ const AddReview = () => {
         console.log( data);
         e.target.reset();
 
-        const url = `http://localhost:5000/review`
+        const url = `https://frozen-beyond-80162.herokuapp.com/review`
         fetch(url, {
             method: 'POST',
             headers: {
