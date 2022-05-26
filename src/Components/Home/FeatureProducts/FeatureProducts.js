@@ -7,7 +7,12 @@ import Product from '../../Shared/Product/Product';
 
 const FeatureProducts = () => {
 
-   
+    // useItems custom hook 
+    const [items, setItems]=useItems([])
+
+    if(items?.length===0){
+        return <Loading></Loading>
+    }
   
     return (
         <div className=''>
