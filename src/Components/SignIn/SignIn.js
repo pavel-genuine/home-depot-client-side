@@ -7,43 +7,6 @@ import Loading from '../Shared/Loading';
 
 const SignIn = () => {
 
-    const { register, formState: { errors }, handleSubmit } = useForm();
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
-
-
-    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
-
-
-    // const [token] = useToken(user || gUser);
-
-    let signInError;
-    const navigate = useNavigate();
-    const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
-
-    
-        if (user || user1) {
-            navigate(from, { replace: true });
-        }
-    
-
-    if (loading || loading1) {
-        return <Loading></Loading>
-    }
-
-    if(error || error1){
-        console.log(error1);
-        signInError= <p className='text-red-500'><small>{error?.message || error1?.message }</small></p>
-    }
-
-    const onSubmit = data => {
-        signInWithEmailAndPassword(data.email, data.password);
-    }
 
     return (
         <div className='bg-[#050535] flex h-screen justify-center items-center'>
