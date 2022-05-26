@@ -112,10 +112,12 @@ const PurchaseProduct = () => {
         // console.log(user, data);
         e.target.reset();
         navigate(`/payment/${id}`)
+ 
+        const email =user.email
 
-        const url = `http://localhost:5000/user`
+        const url = `http://localhost:5000/user/${email}`
         fetch(url, {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
@@ -126,7 +128,7 @@ const PurchaseProduct = () => {
         
 
             const url2 =`http://localhost:5000/order`
-             const email=user.email
+            //  const email=user.email
 
              const information ={
                  id:product._id,
@@ -203,8 +205,8 @@ const PurchaseProduct = () => {
                                 <span className="label-text">Name</span>
                             </label>
                             <input
-                                type="text" readOnly
-                                value={user.displayName}
+                                type="text" 
+                                placeholder={`${user.displayName}  (You can update it..)`}
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("name", {
                                     required: {
@@ -248,7 +250,7 @@ const PurchaseProduct = () => {
                             </label>
                             <input
                                 type=""
-                                placeholder={user.phoneNumber}
+                                placeholder={`${user?.phoneNumber} (You can update it..)`}
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("phone", {
                                     required: {

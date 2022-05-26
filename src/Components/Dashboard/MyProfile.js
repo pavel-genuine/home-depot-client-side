@@ -14,7 +14,7 @@ const MyProfile = () => {
         fetch(`http://localhost:5000/users?email=${email}`)
             .then(res => res.json())
             .then(data => {setProfile(data)
-            // console.log(data);
+            console.log(data);
         })
     }, [])
 
@@ -32,7 +32,17 @@ const MyProfile = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(result => console.log( result))      
+            .then(result => console.log( result))   
+            
+            // fetch(`http://localhost:5000/user`, {
+            //     method: 'POST',
+            //     headers: {
+            //         'content-type': 'application/json'
+            //     },
+            //     body: JSON.stringify(data)
+            // })
+            //     .then(res => res.json())
+            //     .then(result => console.log( result)) 
 
     }
 
@@ -50,7 +60,7 @@ const MyProfile = () => {
                             </label>
                             <input
                                 type="text" 
-                                value={profile?.name}
+                                placeholder={` (You can update it...)`}
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("name", {
                                     required: {
@@ -94,7 +104,7 @@ const MyProfile = () => {
                             </label>
                             <input
                                 type=""
-                                placeholder={profile?.phone}
+                                placeholder="Phone number"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("phone", {
                                     required: {
@@ -120,7 +130,7 @@ const MyProfile = () => {
                             </label>
                             <input
                                 type="text"
-                                value={profile?.address}
+                                placeholder='Address'
                                 className="input input-bordered w-full max-w-xs mb-2"
                                 {...register("address", {
                                     required: {
