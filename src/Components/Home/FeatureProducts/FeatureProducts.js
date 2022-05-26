@@ -16,7 +16,7 @@ const FeatureProducts = () => {
   
     return (
         <div className='p-2' >
-            <div  className='grid md:grid-cols-3 grid-cols-1 gap-10 '>
+            <div  className='grid md:grid-cols-3 grid-cols-1 gap-10 md:pl-10'>
              
                 {
                 items?.map(item=><Product item={item} key={item._id}  ></Product>).slice(items?.length-6,items?.length)

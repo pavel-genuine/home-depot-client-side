@@ -43,7 +43,10 @@ function App() {
           <Route path="my-orders" element={ <MyOrders></MyOrders>}></Route>
          
           <Route path="orders" element={<RequireAdmin><Orders></Orders></RequireAdmin>}></Route>
+          {/* <Route path="orders" element={<Orders></Orders>}></Route> */}
           <Route path="add-product" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+
+          {/* <Route path="manage-product/" element={<ManageProduct></ManageProduct>}></Route> */}
           <Route path="manage-product/" element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
           <Route path="make-admin/" element={<MakeAdmin></MakeAdmin>}></Route>
 

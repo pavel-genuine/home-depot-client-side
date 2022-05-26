@@ -13,7 +13,7 @@ const Orders = () => {
         fetch('http://localhost:5000/orders')
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+            // console.log(data);
             setOrders(data)})
     },[orders]
         
@@ -24,14 +24,14 @@ const Orders = () => {
            Orders length :{orders?.length}
          <div className='grid  md:grid-cols-4 grid-cols-1 gap-2'>
          {
-               orders.map(order=>
-                <div className='shadow-lg p-10 m-5'>
-                    <p className='font-semibold'>Name: {order?.product? order?.product?.name:order?.name}</p>
-                    <p>Unit Price : {order?.product? order?.product?.price:order?.price}</p>
+               orders.map((order,index)=>
+                <div key={index} className='shadow-lg p-10 m-5'>
+                    <p className='font-semibold'>Name: {order?.name}</p>
+                    <p>Unit Price : {order?.price}</p>
                     
-                    <p>Quantity : {order?.product?order?.product?.quantity:order?.quantity}</p>
+                    <p>Quantity : {order?.quantity}</p>
                 {
-                    order?.payment? <button className='btn btn-sm btn-success mt-2'>Pending</button> :<button className='btn btn-sm btn-primary mt-2'>Unpaid</button>
+                    order?.paid? <button className='btn btn-sm btn-success mt-2'>Pending</button> :<button className='btn btn-sm btn-error mt-2'>Unpaid</button>
 
                 }
                 </div>)
