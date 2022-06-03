@@ -15,10 +15,8 @@ const Header = () => {
 
     const menuItems = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/business-summary">Business Summary</Link></li>
         <li><Link to="/reviews">Reviews</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
    
         <li><Link to="/portfolio">Portfolio</Link></li>
         {
@@ -38,7 +36,7 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Tools Factory</a>
+                <a className="btn btn-ghost normal-case text-xl">Home Depot</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

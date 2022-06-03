@@ -32,9 +32,9 @@ function App() {
 
      <Routes>
        <Route path='/' element={<Home></Home>}></Route>
-       <Route path='/business-summary' element={<BusinessSummary></BusinessSummary>}></Route>
+       {/* <Route path='/business-summary' element={<BusinessSummary></BusinessSummary>}></Route> */}
        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-       <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
+       {/* <Route path='/contact' element={<ContactUs></ContactUs>}></Route> */}
        <Route path="/purchase/:id" element={<RequireAuth><PurchaseProduct /></RequireAuth>} ></Route>
        <Route path="/payment/:id" element={<RequireAuth><Payment/></RequireAuth>} ></Route>
        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >

@@ -22,7 +22,7 @@ const ContactUs = () => {
                                 Cell : 017777777777777
                             </h6 >
                             <h6  className='font-semibold' >
-                                Email : feedback@gadgetarena.com
+                                Email : feedback@homedepot.com
                             </h6>
                         </address>
                     </div>
@@ -43,7 +43,7 @@ const ContactUs = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Submit</button>
+                                <button className="btn">Submit</button>
                             </div>
                         </div>
                     </div>

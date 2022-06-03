@@ -26,7 +26,7 @@ const AddProduct = () => {
     return (
         <div className='w-80 mx-auto mt-10'>
             <form onSubmit={handleSubmit(onSubmit)}>
-                        <h5 className='font-semibold'>Add A Tool</h5>
+                        <h5 className='font-semibold'>Add A Product</h5>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Tool Name</span>
@@ -34,7 +34,7 @@ const AddProduct = () => {
                             <input
                                 type="text" 
 
-                                placeholder='Tool Name'
+                                placeholder='Product Name'
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("name", {
                                     required: {
@@ -45,6 +45,26 @@ const AddProduct = () => {
                             />
                             <label className="label">
                                 {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                            </label>
+                        </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Tool Description</span>
+                            </label>
+                            <input
+                                type="text" 
+
+                                placeholder='Product Description'
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("description", {
+                                    required: {
+                                        value: true,
+                                        message: 'Description is Required'
+                                    }
+                                })}
+                            />
+                            <label className="label">
+                                {errors.description?.type === 'required' && <span className="label-text-alt text-red-500">{errors.description.message}</span>}
                             </label>
                         </div>
                         <div className="form-control w-full max-w-xs">
@@ -61,6 +81,26 @@ const AddProduct = () => {
                             
                         </div>
 
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Unit Price</span>
+                            </label>
+                            <input
+                                type="text" 
+                                placeholder='Unit Price'
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("price", {
+                                    required: {
+                                        value: true,
+                                        message: 'Price is Required'
+                                    }
+                                    
+                                })}
+                            />
+                            <label className="label">
+                                {errors.price?.type === 'required' && <span className="label-text-alt text-red-500">{errors.price.message}</span>}
+                            </label>
+                        </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Min. Quantity</span>
@@ -120,7 +160,7 @@ const AddProduct = () => {
                            
 
                         </div>
-                        <input className='btn mt-10 text-white font-bold py-2 px-4 rounded' type="submit" value='Add Tool' />
+                        <input className='btn mt-10 text-white font-bold py-2 px-4 rounded' type="submit" value='Add Product' />
 
                     </form>
         </div>
