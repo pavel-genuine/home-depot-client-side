@@ -15,7 +15,7 @@ const Product = (props) => {
     return (
         <div >
 
-            <div className="card card-compact w-96 bg-base-100 shadow-xl ">
+            <div  className="card card-compact w-96 bg-base-100 shadow-xl ">
                 <Carousel
                     wrapAround={true}
                     // autoplay={true}
