@@ -6,9 +6,9 @@ const Faq = () => {
         <div  className='py-20'>
             <h1 className="text-5xl font-semibold text-center mb-5"> Frequently Ask Questions</h1>
 
-            <div data-aos="fade-up" className="hero ">
+            <div className="hero ">
                 <div className="hero-content grid md:grid-cols-2 grid-cols-1 ">
-                    <img src="https://pavel-genuine.github.io/party-center-bootstrap/images/FAQ.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+                    <img  src="https://pavel-genuine.github.io/party-center-bootstrap/images/FAQ.jpg" className="w-[90%] mx-auto rounded-lg shadow-2xl" />
                     <div>
                         <div className="collapse collapse-arrow border-b-2">
                             <input type="checkbox" />

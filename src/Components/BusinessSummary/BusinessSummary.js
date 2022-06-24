@@ -3,10 +3,10 @@ import './BusinessSummary.css'
 
 const BusinessSummary = () => {
   return (
-    <div className='bzsum text-center bg-blue-200 pb-10'>
+    <div className='bzsum text-center bg-blue-200 py-10'>
       <h1 className='text-6xl  font-semibold mt-7 text-white m-5'>We Grow With Your Trust... </h1>
 
-      <div data-aos="fade-up" className="stats shadow-lg mt-10 " style={{ width: '90%' }}>
+      <div   className="stats shadow-lg mt-10 " style={{ width: '90%' }}>
 
         <div className="stat">
           <div className="stat-figure text-primary">
@@ -49,7 +49,7 @@ const BusinessSummary = () => {
       </div>
 
 
-      <div data-aos="fade-up" className="stats border-2 text mt-10 " style={{ width: '90%' }}>
+      <div className="stats border-2 text mt-10 " style={{ width: '90%' }}>
 
         <div className="stat">
           <div className="stat-title">Have any query ?</div>

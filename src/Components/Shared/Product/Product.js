@@ -1,5 +1,5 @@
 import Carousel from 'nuka-carousel';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Product.css'
 
@@ -12,10 +12,12 @@ const Product = (props) => {
         navigate(`/purchase/${_id}`)
     }
 
-    return (
-        <div >
 
-            <div  className="card card-compact w-96 bg-base-100 shadow-xl ">
+
+  return (
+    <div >
+     
+            <div  className="before card card-compact ml-8  bg-base-100 shadow-xl ">
                 <Carousel
                     wrapAround={true}
                     // autoplay={true}
@@ -45,8 +47,6 @@ const Product = (props) => {
 
                 </div>
             </div>
-
-
 
         </div>
     );

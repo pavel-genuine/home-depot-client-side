@@ -2,7 +2,7 @@
   "name": "full-stack-12-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pavel-genuine.github.io",
+  "homepage": "https://pavel-genuine.github.io/home-depot-client-side/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -19,7 +19,6 @@
     "daisyui": "^2.15.0",
     "firebase": "^9.8.1",
     "flickity": "^3.0.0",
-    "gh-pages": "^4.0.0",
     "nuka-carousel": "^5.0.16",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -59,6 +58,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "gh-pages": "^4.0.0",
+    "netlify-cli": "^10.4.0",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.0.24"
   }

@@ -5,3 +5,17 @@
 .img:hover{
     transform: scale(1.3);
 }
+
+.hover{
+    position: relative;
+    z-index: 50;
+}
+.before{
+    position: relative;
+    z-index: 0;
+}
+.hover{
+    transform: scaleX(2);
+}
+
+
